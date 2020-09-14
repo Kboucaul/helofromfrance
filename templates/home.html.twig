@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block title %}Welcome{% endblock %}
+{% block body %}
+
+<div class="flex-center full-height">
+    <div class="content">
+        <img src="{{ asset("/img/franceflag.png")}}" class='mb-3 img-responsive' alt="franceflag" />
+        <h1  class='title' >Hello from {{pays}} 🙋</h1>
+        <p>Il est actuellement <badge class="text-success font-weight-bold">{{date | date('H:i', 'Europe/Paris')}}</badge> </p>
+        <hr>
+        <p class="bg-secondary my-0 py-3 text-white font-weight-bold">© Copyright 2018 - {{ date | date('Y') }} Kévin Boucault</p>
+    </div>
+</div>
+{% endblock %}
